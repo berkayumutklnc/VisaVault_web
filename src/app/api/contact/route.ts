@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
     }
 
     const toEmail =
-      process.env.CONTACT_TO_EMAIL || "info@visavaultai.com";
+      process.env.CONTACT_TO_EMAIL || "berkay@visavaultai.com";
 
     const formLabel = formType === "pilot" ? "Pilot Başvurusu" : "Demo Talebi";
 

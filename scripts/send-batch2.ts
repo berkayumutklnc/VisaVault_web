@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import * as dotenv from "dotenv";
+import { batch2Leads } from "./leads-batch2";
 
 dotenv.config({ path: ".env.local" });
 
@@ -9,52 +10,7 @@ const FROM = process.env.OUTREACH_FROM!;
 const REPLY_TO = process.env.OUTREACH_REPLY_TO!;
 const SITE_URL = process.env.SITE_URL!;
 
-type Lead = {
-  name: string;
-  email: string | string[];
-  firm: string;
-  intro: string;
-};
-
-const leads: Lead[] = [
-  {
-    name: "Gündüz Law Ekibi",
-    email: "info@gunduzlawfirm.com",
-    firm: "Gündüz Law",
-    intro:
-      "Sitenizde immigration, citizenship, residency ve work permit başlıklarını ayrı bir uzmanlık alanı olarak konumlandırdığınızı gördüm.",
-  },
-  {
-    name: "TMR Legal Ekibi",
-    email: "info@tmrlegal.av.tr",
-    firm: "TMR Legal",
-    intro:
-      "Yabancılar hukuku, oturma izni, çalışma izni ve vatandaşlık tarafındaki odağınız dikkatimi çekti.",
-  },
-  {
-    name: "Kulaçoğlu Law Office Ekibi",
-    email: "info@kulacoglu.av.tr",
-    firm: "Kulaçoğlu Law Office",
-    intro:
-      "Immigration and citizenship law tarafında hem bireysel hem yatırım odaklı süreçleri ele alış biçiminiz ilgimi çekti.",
-  },
-  {
-    name: "Kurucuk & Associates Ekibi",
-    email: "info@kurucuk.com.tr",
-    firm: "Kurucuk & Associates",
-    intro:
-      "Residence permit ve citizenship by investment tarafında yoğun çalışan bir yapı olduğunuzu gördüm.",
-  },
-  {
-    name: "KL Legal Consultancy Ekibi",
-    email: "info@kllegalconsultancy.com",
-    firm: "KL Legal Consultancy",
-    intro:
-      "Yabancılar hukuku ve yatırımcı odaklı dosyalarda belge ve süreç yönetiminin önemli bir darboğaz olabileceğini düşündüm.",
-  },
-];
-
-function buildHtml(lead: Lead) {
+function buildHtml(name: string, intro: string) {
   return `
   <!doctype html>
   <html lang="tr">
@@ -86,11 +42,11 @@ function buildHtml(lead: Lead) {
               <tr>
                 <td style="padding:32px;">
                   <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#0f172a;">
-                    Merhaba ${lead.name},
+                    Merhaba ${name},
                   </p>
 
                   <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#0f172a;">
-                    ${lead.intro}
+                    ${intro}
                   </p>
 
                   <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#0f172a;">
@@ -142,24 +98,11 @@ function buildHtml(lead: Lead) {
   </html>`;
 }
 
-async function main() {
-  console.log(`\n📧 Outreach başlıyor — ${leads.length} alıcı\n`);
+function buildText(name: string, intro: string) {
+  return `
+Merhaba ${name},
 
-  for (const lead of leads) {
-    const subject = "Immigration dosyaları için daha düzenli belge akışı";
-
-    const toEmails = Array.isArray(lead.email) ? lead.email : [lead.email];
-
-    const { data, error } = await resend.emails.send({
-      from: FROM,
-      to: toEmails,
-      replyTo: REPLY_TO,
-      subject,
-      html: buildHtml(lead),
-      text: `
-Merhaba ${lead.name},
-
-${lead.intro}
+${intro}
 
 Ben Berkay. VisaVault AI adlı, immigration law firm'ler için geliştirdiğim bir belge toplama ve AI destekli ön inceleme platformu üzerinde çalışıyorum.
 
@@ -177,20 +120,52 @@ Demo: ${SITE_URL}/demo
 Selamlar,
 Berkay Umut Kılınç
 Founder, VisaVault AI
-      `,
+  `;
+}
+
+async function main() {
+  // Boş maillileri filtrele
+  const validLeads = batch2Leads.filter((lead) => {
+    const emails = Array.isArray(lead.email) ? lead.email : [lead.email];
+    return emails.some((e) => e.trim() !== "");
+  });
+
+  const skipped = batch2Leads.length - validLeads.length;
+
+  console.log(`\n📧 Batch 2 Outreach — ${validLeads.length} alıcı (${skipped} atlandı — mail yok)\n`);
+
+  let sent = 0;
+  let failed = 0;
+
+  for (const lead of validLeads) {
+    const toEmails = (Array.isArray(lead.email) ? lead.email : [lead.email])
+      .map((e) => e.trim())
+      .filter((e) => e !== "");
+
+    const subject = "Immigration dosyaları için daha düzenli belge akışı";
+
+    const { data, error } = await resend.emails.send({
+      from: FROM,
+      to: toEmails,
+      replyTo: REPLY_TO,
+      subject,
+      html: buildHtml(lead.name, lead.intro),
+      text: buildText(lead.name, lead.intro),
     });
 
     if (error) {
-      console.error(`❌ HATA -> ${lead.firm}:`, error);
+      console.error(`❌ HATA -> ${lead.firm} (${toEmails.join(", ")}):`, error);
+      failed++;
     } else {
-      console.log(`✅ GÖNDERİLDİ -> ${lead.firm} (${lead.email}):`, data?.id);
+      console.log(`✅ GÖNDERİLDİ -> ${lead.firm} (${toEmails.join(", ")}):`, data?.id);
+      sent++;
     }
 
     // Spam gibi görünmemek için bekleme
     await new Promise((resolve) => setTimeout(resolve, 2500));
   }
 
-  console.log("\n🏁 Tamamlandı.\n");
+  console.log(`\n🏁 Tamamlandı — ${sent} gönderildi, ${failed} hata, ${skipped} atlandı.\n`);
 }
 
 main().catch(console.error);

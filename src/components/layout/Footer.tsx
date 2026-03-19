@@ -102,15 +102,31 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-xs text-brand-muted/50">
             &copy; {new Date().getFullYear()} VisaVault AI. Tüm hakları saklıdır.
           </p>
-          <p className="text-xs text-brand-muted/50">
-            <Link href="mailto:info@visavaultai.com" className="hover:text-brand-text transition-colors">
-              info@visavaultai.com
+
+          <div className="flex flex-col sm:flex-row items-center gap-3 text-xs text-brand-muted/50">
+            <span className="font-medium text-brand-muted/70">Berkay Umut KILINÇ — Founder</span>
+            <span className="hidden sm:inline">·</span>
+            <Link href="mailto:berkay@visavaultai.com" className="hover:text-brand-text transition-colors">
+              berkay@visavaultai.com
             </Link>
-          </p>
+            <span className="hidden sm:inline">·</span>
+            <Link href="tel:+905541790203" className="hover:text-brand-text transition-colors">
+              +90 (554) 179 02 03
+            </Link>
+            <span className="hidden sm:inline">·</span>
+            <Link
+              href="https://www.linkedin.com/in/visavault-ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-text transition-colors"
+            >
+              LinkedIn
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

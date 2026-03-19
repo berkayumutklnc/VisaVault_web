@@ -40,12 +40,19 @@ export default function ThanksPage() {
           Genellikle 1–2 iş günü içinde yanıt veriyoruz. Acil bir konunuz
           varsa{" "}
           <a
-            href="mailto:info@visavaultai.com"
+            href="mailto:berkay@visavaultai.com"
             className="text-brand-accent hover:underline"
           >
-            info@visavaultai.com
+            berkay@visavaultai.com
           </a>{" "}
-          adresinden bize ulaşabilirsiniz.
+          adresinden veya{" "}
+          <a
+            href="tel:+905541790203"
+            className="text-brand-accent hover:underline"
+          >
+            +90 (554) 179 02 03
+          </a>{" "}
+          numarasından bize ulaşabilirsiniz.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
