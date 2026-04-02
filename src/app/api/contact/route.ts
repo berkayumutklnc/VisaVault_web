@@ -31,6 +31,7 @@ type ContactBody = {
   caseVolume?: string;
   message?: string;
   formType: "demo" | "pilot";
+  locale?: string;
   _honeypot?: string;
 };
 
@@ -49,7 +50,7 @@ export async function POST(req: NextRequest) {
 
     if (!checkRateLimit(ip)) {
       return NextResponse.json(
-        { error: "Çok fazla istek gönderildi. Lütfen bir süre bekleyin." },
+        { error: "Too many requests. Please wait a moment." },
         { status: 429 }
       );
     }
@@ -70,10 +71,11 @@ export async function POST(req: NextRequest) {
     const caseVolume = sanitize(body.caseVolume);
     const message = sanitize(body.message);
     const formType = body.formType === "pilot" ? "pilot" : "demo";
+    const locale = body.locale === "tr" ? "tr" : "en";
 
     if (!name || !company || !email) {
       return NextResponse.json(
-        { error: "Ad, şirket ve e-posta alanları zorunludur." },
+        { error: locale === "tr" ? "Ad, şirket ve e-posta alanları zorunludur." : "Name, company, and email are required." },
         { status: 400 }
       );
     }
@@ -81,7 +83,7 @@ export async function POST(req: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: "Geçersiz e-posta adresi." },
+        { error: locale === "tr" ? "Geçersiz e-posta adresi." : "Invalid email address." },
         { status: 400 }
       );
     }
@@ -89,24 +91,26 @@ export async function POST(req: NextRequest) {
     const toEmail =
       process.env.CONTACT_TO_EMAIL || "berkay@visavaultai.com";
 
-    const formLabel = formType === "pilot" ? "Pilot Başvurusu" : "Demo Talebi";
+    const formLabel = formType === "pilot" ? "Pilot Başvurusu / Pilot Application" : "Demo Talebi / Demo Request";
+    const langLabel = locale === "tr" ? "Türkçe" : "English";
 
     const html = `
       <h2>Yeni ${formLabel} — VisaVault AI</h2>
       <table style="border-collapse:collapse;width:100%;max-width:600px;">
-        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Ad Soyad</td><td style="padding:8px;border-bottom:1px solid #eee;">${name}</td></tr>
-        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Şirket</td><td style="padding:8px;border-bottom:1px solid #eee;">${company}</td></tr>
-        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">E-posta</td><td style="padding:8px;border-bottom:1px solid #eee;">${email}</td></tr>
-        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Rol</td><td style="padding:8px;border-bottom:1px solid #eee;">${role || "—"}</td></tr>
-        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Dosya Hacmi</td><td style="padding:8px;border-bottom:1px solid #eee;">${caseVolume || "—"}</td></tr>
-        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Not</td><td style="padding:8px;border-bottom:1px solid #eee;">${message || "—"}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;">Form Tipi</td><td style="padding:8px;">${formLabel}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Ad Soyad / Name</td><td style="padding:8px;border-bottom:1px solid #eee;">${name}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Şirket / Company</td><td style="padding:8px;border-bottom:1px solid #eee;">${company}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">E-posta / Email</td><td style="padding:8px;border-bottom:1px solid #eee;">${email}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Rol / Role</td><td style="padding:8px;border-bottom:1px solid #eee;">${role || "—"}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Dosya Hacmi / Case Volume</td><td style="padding:8px;border-bottom:1px solid #eee;">${caseVolume || "—"}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Not / Note</td><td style="padding:8px;border-bottom:1px solid #eee;">${message || "—"}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Form Tipi / Form Type</td><td style="padding:8px;border-bottom:1px solid #eee;">${formLabel}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;">Form Dili / Language</td><td style="padding:8px;">${langLabel}</td></tr>
       </table>
     `;
 
     await sendEmail({
       to: toEmail,
-      subject: `[VisaVault AI] Yeni ${formLabel}: ${name} — ${company}`,
+      subject: `[VisaVault AI] ${formLabel}: ${name} — ${company}`,
       html,
       replyTo: email,
     });
@@ -115,7 +119,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("[Contact API]", error);
     return NextResponse.json(
-      { error: "Bir hata oluştu. Lütfen daha sonra tekrar deneyin." },
+      { error: "An error occurred. Please try again later." },
       { status: 500 }
     );
   }

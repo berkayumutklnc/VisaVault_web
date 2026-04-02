@@ -1,7 +1,10 @@
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Reveal } from "@/components/ui/Reveal";
+import type { Dictionary } from "@/lib/get-dictionary";
 
-export function AttorneyControl() {
+type AttorneyControlDict = Dictionary["attorneyControl"];
+
+export function AttorneyControl({ dict }: { dict: AttorneyControlDict }) {
   return (
     <SectionWrapper id="attorney-control">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -12,32 +15,19 @@ export function AttorneyControl() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="inline -mt-0.5 mr-1.5">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              Avukat Kontrolü
+              {dict.eyebrow}
             </span>
           </Reveal>
 
           <Reveal delay={1}>
             <h2 className="heading-2 mb-6">
-              AI Ön İnceleme Yapar,{" "}
-              <span className="text-brand-accent">Son Karar Avukata Aittir</span>
+              {dict.headingBefore}
+              <span className="text-brand-accent">{dict.headingAccent}</span>
             </h2>
           </Reveal>
 
           <div className="space-y-5">
-            {[
-              {
-                title: "AI, Belgeleri Ön İnceler",
-                desc: "Yapay zeka, yüklenen belgeleri kontrol eder ve olası eksiklikleri, uyumsuzlukları işaretler. Bu bir ön filtreleme katmanıdır.",
-              },
-              {
-                title: "Avukat, Kendi Değerlendirmesini Yapar",
-                desc: "Avukat, AI ön incelemesini referans alır ancak kendi bağımsız değerlendirmesini yaparak belge hakkında nihai kararı verir.",
-              },
-              {
-                title: "Hiçbir Otomatik Karar Yok",
-                desc: "Sistem hiçbir belgeyi otomatik olarak onaylamaz veya reddetmez. Her belge mutlaka bir avukatın incelemesinden geçer.",
-              },
-            ].map((item, i) => (
+            {dict.items.map((item, i) => (
               <Reveal key={item.title} delay={Math.min(i + 2, 4) as 0 | 1 | 2 | 3 | 4}>
                 <div className="flex gap-4 group">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/[0.08] border border-brand-accent/[0.15] flex items-center justify-center transition-colors group-hover:bg-brand-accent/[0.15]">
@@ -49,7 +39,7 @@ export function AttorneyControl() {
                     <h3 className="font-heading font-semibold text-brand-text mb-1">
                       {item.title}
                     </h3>
-                    <p className="body-base">{item.desc}</p>
+                    <p className="body-base">{item.description}</p>
                   </div>
                 </div>
               </Reveal>
@@ -60,7 +50,6 @@ export function AttorneyControl() {
         {/* Right: Visual flow card */}
         <Reveal delay={2}>
           <div className="card p-8 lg:p-10 relative overflow-hidden">
-            {/* Top highlight */}
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent/20 to-transparent" />
 
             <div className="space-y-4">
@@ -73,9 +62,9 @@ export function AttorneyControl() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-brand-accent-cool">AI Ön İnceleme</p>
+                  <p className="text-sm font-medium text-brand-accent-cool">{dict.flowAiLabel}</p>
                   <p className="text-sm text-brand-muted mt-1">
-                    &quot;Pasaport belgesi yüklendi. Geçerlilik tarihi uyumlu. İmza alanı kontrol edilmeli.&quot;
+                    &quot;{dict.flowAiText}&quot;
                   </p>
                 </div>
               </div>
@@ -93,9 +82,9 @@ export function AttorneyControl() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-brand-accent">Avukat Kararı</p>
+                  <p className="text-sm font-medium text-brand-accent">{dict.flowAttorneyLabel}</p>
                   <p className="text-sm text-brand-muted mt-1">
-                    &quot;İmza alanını inceledim, belge kabul edildi. Müvekkile bilgilendirme gönderildi.&quot;
+                    &quot;{dict.flowAttorneyText}&quot;
                   </p>
                 </div>
               </div>

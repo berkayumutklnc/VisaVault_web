@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "siteTitle": "VisaVault AI — Immigration Case Management Platform",
+    "siteDescription": "A digital case management solution that unifies document collection, AI-powered preliminary review, and attorney-controlled decision workflows for immigration law firms.",
+    "ogImageAlt": "VisaVault AI — Immigration Case Management",
+    "home": {
+      "title": "Immigration Case Management Platform",
+      "description": "A digital workflow management solution that unifies document collection, AI-powered preliminary review, and attorney-controlled decision workflows for immigration law firms. Explore the pilot program."
+    },
+    "demo": {
+      "title": "Request a Demo",
+      "description": "See VisaVault AI in action. Explore how the immigration case management platform handles document collection, AI preliminary review, and attorney-controlled workflows."
+    },
+    "pilot": {
+      "title": "Pilot Program",
+      "description": "Start a 2–4 week controlled pilot with VisaVault AI. Evaluate the immigration case management platform with measurable goals and limited scope."
+    },
+    "security": {
+      "title": "Security & Control",
+      "description": "VisaVault AI's approach to security and control: role-based access, attorney-controlled workflows, auditable processes, and secure document management."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "VisaVault AI privacy policy. How your personal data is collected, used, and protected."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "VisaVault AI terms of service. Conditions and rules governing the use of our platform."
+    },
+    "thanks": {
+      "title": "Thank You",
+      "description": "Your request has been received. We will get back to you shortly."
+    }
+  },
+  "header": {
+    "ariaHome": "VisaVault AI Homepage",
+    "ariaNav": "Main navigation",
+    "ariaMobileNav": "Mobile navigation",
+    "ariaMenuOpen": "Open menu",
+    "ariaMenuClose": "Close menu",
+    "nav": {
+      "solution": "Solution",
+      "howItWorks": "How It Works",
+      "security": "Security",
+      "pilot": "Pilot Program"
+    },
+    "cta": "Request Demo"
+  },
+  "footer": {
+    "description": "Unifies document collection, AI-powered preliminary review, and attorney-controlled decision workflows for immigration law firms.",
+    "product": "Product",
+    "getStarted": "Get Started",
+    "legal": "Legal",
+    "navSolution": "Solution",
+    "navHowItWorks": "How It Works",
+    "navSecurity": "Security",
+    "navDemo": "Request Demo",
+    "navPilot": "Pilot Program",
+    "navPrivacy": "Privacy Policy",
+    "navTerms": "Terms of Service",
+    "copyright": "All rights reserved."
+  },
+  "hero": {
+    "pills": ["Attorney Controlled", "AI Pre-Review", "Open for Pilot"],
+    "headingBefore": "",
+    "headingAccent": "Document Collection & AI Pre-Review",
+    "headingAfter": " Platform for Immigration Law Firms",
+    "body": "VisaVault AI unifies document collection, AI-powered preliminary review, and attorney-controlled decision workflows in a single digital workspace. Streamlined processes, full case visibility.",
+    "bodySmall": "AI provides preliminary review support. Final legal assessment remains with the attorney.",
+    "ctaDemo": "Request Demo",
+    "ctaPilot": "Explore Pilot Program"
+  },
+  "problem": {
+    "eyebrow": "Current Challenges",
+    "heading": "Document Workflow Challenges in Immigration Law",
+    "description": "Document collection and preliminary review remain among the most time-consuming stages for immigration law firms.",
+    "items": [
+      {
+        "title": "Scattered Document Collection",
+        "description": "Documents arrive via email, WhatsApp, file sharing, and other channels. It's unclear which documents have been received and which are still missing."
+      },
+      {
+        "title": "Endless Revision Cycles",
+        "description": "Clients are asked for the same documents repeatedly, version conflicts arise, and no one has a clear view of the latest status."
+      },
+      {
+        "title": "Slow Preliminary Review",
+        "description": "Reviewing each document manually takes time. Attorney hours are spent on low-value verification tasks instead of substantive legal work."
+      },
+      {
+        "title": "Fragmented Communication",
+        "description": "Communication between clients and attorneys is scattered across multiple channels. Notes get lost, and context is incomplete."
+      }
+    ]
+  },
+  "solution": {
+    "eyebrow": "Solution",
+    "heading": "One Platform, Streamlined Process",
+    "description": "VisaVault AI consolidates the entire workflow — from document collection to attorney approval — in a single digital workspace.",
+    "items": [
+      {
+        "title": "Client Document Upload",
+        "description": "Clients upload their documents through a secure portal. Which documents are expected and which have been received is always clear."
+      },
+      {
+        "title": "AI Preliminary Review",
+        "description": "Uploaded documents undergo AI-powered preliminary review. Missing items, inconsistencies, and areas requiring attention are automatically flagged."
+      },
+      {
+        "title": "Attorney Assessment",
+        "description": "The attorney reviews the AI preliminary findings, adds their own notes, and makes the decision on the document. The final word always rests with the attorney."
+      },
+      {
+        "title": "Revision & Communication",
+        "description": "Revision requests are sent to clients for incomplete or insufficient documents. The entire process stays within a single workflow."
+      },
+      {
+        "title": "Controlled Communication Flow",
+        "description": "Client-attorney communication is organized on a per-case basis. Notes, requests, and updates are consolidated in one place."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Process",
+    "heading": "How It Works",
+    "description": "Four steps to a more controlled and transparent document collection and review process.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Document Upload",
+        "description": "The client uploads required documents through a secure portal. Missing documents are automatically listed."
+      },
+      {
+        "step": "02",
+        "title": "AI Pre-Review",
+        "description": "Uploaded documents undergo AI-powered preliminary review. Potential gaps and areas requiring attention are flagged."
+      },
+      {
+        "step": "03",
+        "title": "Attorney Review",
+        "description": "The attorney reviews the AI's preliminary notes, performs an independent assessment, and makes the decision."
+      },
+      {
+        "step": "04",
+        "title": "Revision or Approval",
+        "description": "If sufficient, the document is approved. If not, a clear revision request is sent to the client. The process continues within the same workflow."
+      }
+    ]
+  },
+  "productProof": {
+    "eyebrow": "Product",
+    "heading": "See the Product Up Close",
+    "description": "The actual VisaVault AI interface. Client portal, document review screen, and attorney decision panel.",
+    "captionDashboard": "Attorney panel — Case status, document list, and AI pre-review notes",
+    "captionReview": "AI pre-review — Document detail panel",
+    "captionMobile": "Client portal — Mobile document upload",
+    "altDashboard": "VisaVault AI — Case management panel and document status",
+    "altReview": "VisaVault AI — Document detail and AI review panel",
+    "altMobile": "VisaVault AI — Client mobile document upload"
+  },
+  "attorneyControl": {
+    "eyebrow": "Attorney Control",
+    "headingBefore": "AI Performs Preliminary Review, ",
+    "headingAccent": "Final Decision Rests with the Attorney",
+    "items": [
+      {
+        "title": "AI Reviews Documents First",
+        "description": "The AI checks uploaded documents and flags potential gaps and inconsistencies. This serves as a preliminary filtering layer."
+      },
+      {
+        "title": "Attorney Makes the Final Call",
+        "description": "The attorney uses the AI pre-review as a reference but performs an independent assessment and makes the final decision on each document."
+      },
+      {
+        "title": "No Automated Decisions",
+        "description": "The system never automatically approves or rejects any document. Every document must go through attorney review."
+      }
+    ],
+    "flowAiLabel": "AI Pre-Review",
+    "flowAiText": "Passport document uploaded. Validity date is consistent. Signature field requires verification.",
+    "flowAttorneyLabel": "Attorney Decision",
+    "flowAttorneyText": "Signature field reviewed — document accepted. Client notification sent."
+  },
+  "auditability": {
+    "eyebrow": "Auditability",
+    "heading": "Transparent & Auditable Process",
+    "description": "Every document, every step, and every decision is on record. The process becomes transparent, traceable, and manageable.",
+    "items": [
+      {
+        "title": "Document Status Tracking",
+        "description": "The current status of every document (pending, in review, approved, revision required) is visible at a glance.",
+        "chip": "Approved"
+      },
+      {
+        "title": "Process Timeline",
+        "description": "A dated timeline is maintained for each case. Who did what, and when — clearly documented.",
+        "chip": "Timeline"
+      },
+      {
+        "title": "Decision Notes",
+        "description": "Attorney notes and AI pre-review summaries are stored per document. Revision history is preserved.",
+        "chip": "Notes"
+      },
+      {
+        "title": "Audit Trail",
+        "description": "All actions are logged. Who took which step and when is always traceable throughout the process.",
+        "chip": "Audit Log"
+      }
+    ]
+  },
+  "pilotCTA": {
+    "eyebrow": "Pilot Program",
+    "heading": "Start with a Controlled Pilot",
+    "description": "Evaluate VisaVault AI over a 2–4 week pilot program with limited scope and measurable goals. Test with real cases, zero risk.",
+    "metrics": [
+      { "value": "2–4", "label": "Week Pilot Duration" },
+      { "value": "5–15", "label": "Cases to Test" },
+      { "value": "$0", "label": "Upfront Cost" }
+    ],
+    "ctaPilot": "Explore Pilot Program",
+    "ctaDemo": "Watch Demo First"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Frequently Asked Questions",
+    "description": "Common questions about VisaVault AI.",
+    "items": [
+      {
+        "question": "Does VisaVault AI make decisions on behalf of the attorney?",
+        "answer": "No. VisaVault AI only provides preliminary review support. It flags potential gaps and areas of concern in documents. Approval, rejection, or revision decisions always rest with the attorney. The system never automatically approves or rejects any document."
+      },
+      {
+        "question": "What types of law firms is it suitable for?",
+        "answer": "VisaVault AI is designed primarily for boutique and mid-size law firms practicing immigration law. It's well-suited for firms experiencing high volume in document collection and preliminary review, and those looking to streamline client communication."
+      },
+      {
+        "question": "How does the pilot program work?",
+        "answer": "The pilot program runs for 2–4 weeks. It allows you to test the platform on a limited number of cases with measurable goals in your real workflow. Technical support is provided throughout the pilot."
+      },
+      {
+        "question": "Are our documents secure?",
+        "answer": "Documents are stored on secure infrastructure. Role-based access control is enforced. No document is shared or exported without attorney approval. See our security page for more details."
+      },
+      {
+        "question": "Do I need to completely change my existing workflow?",
+        "answer": "No. VisaVault AI works as a digitized version of your existing document collection process. It is designed to integrate with your current workflow, not replace it. No radical changes required."
+      },
+      {
+        "question": "What if my clients aren't tech-savvy?",
+        "answer": "The client portal is kept as simple as possible. Core functions — document upload, status tracking, and messaging — are presented through a clean, intuitive interface. No complex learning curve."
+      }
+    ]
+  },
+  "form": {
+    "name": "Full Name",
+    "company": "Law Firm / Company",
+    "email": "Email",
+    "role": "Role",
+    "caseVolume": "Monthly Approximate Case Volume",
+    "message": "Brief Note",
+    "namePlaceholder": "Your full name",
+    "companyPlaceholder": "Firm or company name",
+    "emailPlaceholder": "example@yourfirm.com",
+    "messagePlaceholder": "Any additional notes you'd like to share...",
+    "selectPlaceholder": "Select",
+    "roleOptions": [
+      "Founding Attorney / Partner",
+      "Senior Attorney",
+      "Attorney",
+      "Legal Operations",
+      "Consultant",
+      "Other"
+    ],
+    "volumeOptions": [
+      "1–10 cases",
+      "10–30 cases",
+      "30–100 cases",
+      "100+ cases"
+    ],
+    "submitDemo": "Request Demo",
+    "submitPilot": "Submit Pilot Application",
+    "submitting": "Sending...",
+    "disclaimer": "Your information is kept confidential and is not shared with third parties.",
+    "errorRequired": "Please fill in the required fields.",
+    "errorEmail": "Please enter a valid email address.",
+    "errorGeneric": "An error occurred. Please try again."
+  },
+  "demo": {
+    "heading": "See It in Action —",
+    "headingAccent": "Request a Live Demo",
+    "body": "Explore VisaVault AI's document collection, AI preliminary review, and attorney-controlled workflow in a live demo environment. Let's evaluate together whether it's the right fit for your firm.",
+    "expectTitle": "What to Expect from the Demo",
+    "expectItems": [
+      "Live walkthrough of the core workflow",
+      "Hands-on look at the client portal and attorney panel",
+      "AI pre-review module explained",
+      "Q&A tailored to your firm's needs",
+      "Detailed pilot program information"
+    ],
+    "eligibleTitle": "Who Is This For?",
+    "eligibleItems": [
+      "Immigration law firms",
+      "Attorneys looking to streamline document collection",
+      "Teams aiming to digitize legal operations",
+      "Decision-makers evaluating pilot partnerships"
+    ],
+    "formTitle": "Demo Request Form",
+    "formDescription": "Fill out the form and we'll get back to you shortly.",
+    "breadcrumbHome": "Home",
+    "breadcrumbDemo": "Request a Demo"
+  },
+  "pilot": {
+    "badge": "Pilot Program",
+    "heading": "Evaluate with a",
+    "headingAccent": "Controlled Start",
+    "body": "Test VisaVault AI with your firm's real cases, limited scope, and a 2–4 week pilot program. Make a data-driven decision with zero risk.",
+    "ctaApply": "Apply for Pilot",
+    "ctaDemo": "Watch Demo First",
+    "whatTitle": "What Is the Pilot Program?",
+    "whatBody": "The pilot program is a short-term evaluation that lets you test VisaVault AI in your real workflow, in a controlled environment. The goal is to determine — with concrete data — whether the platform is the right fit for your firm.",
+    "duration": "Duration",
+    "durationValue": "2–4 weeks",
+    "scope": "Scope",
+    "scopeValue": "Limited number of test cases",
+    "whoTitle": "Who Is It For?",
+    "whoItems": [
+      "Immigration law firms with regular case volume",
+      "Teams experiencing recurring issues in document collection",
+      "Attorneys looking to improve processes with digital tools",
+      "Firm partners evaluating legal-tech solutions",
+      "Decision-makers seeking a controlled way to test new tools"
+    ],
+    "scopeTitle": "Pilot Scope",
+    "scopeItems": [
+      {
+        "title": "Limited Case Scope",
+        "description": "During the pilot, work is done on a defined number of cases. No need to change your entire firm's operations."
+      },
+      {
+        "title": "Measurable Goals",
+        "description": "Metrics such as document collection time, revision cycles, and attorney review speed are defined upfront."
+      },
+      {
+        "title": "Technical Support",
+        "description": "Setup, training, and technical support are provided throughout the pilot. Your questions are answered promptly."
+      },
+      {
+        "title": "Evaluation Report",
+        "description": "Results and observations from the pilot are shared in a comprehensive report at the end."
+      }
+    ],
+    "criteriaTitle": "Success Criteria",
+    "criteriaBody": "Measurable improvement is targeted in the following areas during the pilot:",
+    "criteriaItems": [
+      "Streamlined document collection process",
+      "Client-attorney communication consolidated in one channel",
+      "Reduced attorney review time with AI pre-review",
+      "Shorter revision cycles",
+      "Greater process visibility and traceability"
+    ],
+    "collabTitle": "What We Need from You",
+    "collabBody": "Your firm's involvement during the pilot is minimal. Just designating the cases for the platform and assigning one team member as the primary contact is sufficient. We handle the rest — setup, onboarding, and training.",
+    "formTitle": "Pilot Program Application",
+    "formBody": "Fill out the form and let's plan the pilot program details together.",
+    "breadcrumbHome": "Home",
+    "breadcrumbPilot": "Pilot Program"
+  },
+  "security": {
+    "heading": "Security & Control",
+    "body": "VisaVault AI prioritizes security, control, and auditability throughout the document management process for law firms. Below are the platform's core security and control principles.",
+    "items": [
+      {
+        "title": "Role-Based Access Control",
+        "description": "Each user role (attorney, client, team member) has distinct access levels. Clients can only access their own cases. Attorneys manage only the cases assigned to them. Access boundaries are clearly defined."
+      },
+      {
+        "title": "Attorney-Controlled Workflow",
+        "description": "No document is automatically approved or rejected. The AI system only performs preliminary review and flags areas of concern. Approval, rejection, and revision decisions are made solely by the attorney."
+      },
+      {
+        "title": "Controlled Document Review Flow",
+        "description": "Documents follow a structured workflow: upload → AI pre-review → attorney assessment → decision. Every step is recorded. Document statuses (pending, in review, approved, revision required) are always visible."
+      },
+      {
+        "title": "Auditability & Process Visibility",
+        "description": "All actions (document upload, review, note addition, decision-making, revision requests) are recorded with timestamps. A per-case timeline shows who did what and when. The audit trail is always accessible."
+      },
+      {
+        "title": "Secure Document Management",
+        "description": "Documents are stored on secure infrastructure. File transfers use encrypted connections. Access permissions are restricted by role. Documents cannot be exported without attorney approval."
+      },
+      {
+        "title": "Email & Notification Separation",
+        "description": "Notifications sent through the platform contain workflow status updates only. Email content does not include document details — it only provides a link to the relevant action. Sensitive information is never shared via email."
+      }
+    ],
+    "disclaimer": "This page provides a general overview of VisaVault AI's security approach. The features described reflect the current architectural design and development goals. Third-party security certifications have not yet been obtained. For detailed security inquiries, please contact us.",
+    "disclaimerNote": "Note:",
+    "breadcrumbHome": "Home",
+    "breadcrumbSecurity": "Security"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "title": "1. Overview",
+        "content": "VisaVault AI (\"Platform\", \"we\") values the privacy of its users. This privacy policy explains how personal data collected through our website (visavaultai.com) and platform is processed.",
+        "list": null
+      },
+      {
+        "title": "2. Data Collected",
+        "content": "The following information may be collected through contact forms and platform usage:",
+        "list": [
+          "Name and contact information (email address)",
+          "Law firm or company name",
+          "Professional role information",
+          "General information about case volume",
+          "Messages and notes submitted through forms",
+          "Website usage data (cookies, page visits, and other technical information)"
+        ]
+      },
+      {
+        "title": "3. Purpose of Data Use",
+        "content": "Collected data is used for the following purposes:",
+        "list": [
+          "Processing demo and pilot program requests",
+          "Communication and updates",
+          "Improving service quality",
+          "Fulfilling legal obligations"
+        ]
+      },
+      {
+        "title": "4. Data Sharing",
+        "content": "Your personal data is not shared with third parties for marketing purposes without your explicit consent. Data may be processed by our service providers (email delivery service, hosting provider, etc.) solely for the purpose of service delivery. These providers are contractually bound not to use the data for their own purposes.",
+        "list": null
+      },
+      {
+        "title": "5. Data Security",
+        "content": "Appropriate technical and organizational measures are in place to protect your personal data. Data is stored on secure servers and access is restricted. However, no internet transmission can be guaranteed to be absolutely secure.",
+        "list": null
+      },
+      {
+        "title": "6. Cookies",
+        "content": "Our website may use technical cookies to ensure basic functionality. If analytics or marketing cookies are used, separate notice will be provided and necessary consents will be obtained.",
+        "list": null
+      },
+      {
+        "title": "7. Your Rights",
+        "content": "Under applicable data protection regulations, you have the following rights:",
+        "list": [
+          "Request access to your data",
+          "Request correction or deletion of your data",
+          "Object to data processing",
+          "Request data portability"
+        ],
+        "contactNote": "To exercise these rights, please contact us at privacy@visavaultai.com."
+      },
+      {
+        "title": "8. Changes",
+        "content": "This privacy policy may be updated from time to time. Changes will be published on this page. Additional notice may be provided for significant changes.",
+        "list": null
+      },
+      {
+        "title": "9. Contact",
+        "content": "For questions about our privacy policy, please contact us at privacy@visavaultai.com.",
+        "list": null
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance",
+        "content": "By using this website (visavaultai.com) or the VisaVault AI platform, you agree to the following terms of service. If you do not accept these terms, you should not use the website or the platform.",
+        "list": null
+      },
+      {
+        "title": "2. Service Description",
+        "content": "VisaVault AI is a digital platform that provides document collection, AI-powered preliminary review, and attorney-controlled decision workflows for immigration law firms. The platform does not provide legal advice and does not alter the attorney-client relationship.",
+        "list": null
+      },
+      {
+        "title": "3. About AI Pre-Review",
+        "content": "The AI component in the platform only provides preliminary review support. Notes, suggestions, and flags generated by the AI are for informational purposes and do not constitute legal advice. Final decisions on documents must always be made by a licensed attorney. VisaVault AI does not guarantee the accuracy or completeness of AI outputs.",
+        "list": null
+      },
+      {
+        "title": "4. User Responsibilities",
+        "content": null,
+        "list": [
+          "You are responsible for maintaining the confidentiality of your account credentials.",
+          "You must use the platform only for lawful purposes.",
+          "You are responsible for the accuracy of documents you upload.",
+          "Activities aimed at misusing the platform, reverse engineering, or probing for security vulnerabilities are prohibited.",
+          "It is the attorney's responsibility to independently verify AI outputs."
+        ]
+      },
+      {
+        "title": "5. Intellectual Property",
+        "content": "The platform, website, and their contents (software, design, text, graphics) are owned by VisaVault AI and protected by copyright. Unauthorized copying, distribution, or commercial use of the contents is prohibited.",
+        "list": null
+      },
+      {
+        "title": "6. Limitation of Liability",
+        "content": "VisaVault AI does not guarantee that the platform will operate without interruption or error. Our liability for direct or indirect damages arising from the use of the platform is limited to the maximum extent permitted by applicable law. Responsibility for legal decisions always rests with the relevant attorney or law firm.",
+        "list": null
+      },
+      {
+        "title": "7. Service Changes",
+        "content": "We reserve the right to modify the platform's features, pricing, or terms of service with prior notice. Users will be informed of significant changes.",
+        "list": null
+      },
+      {
+        "title": "8. Account Termination",
+        "content": "We reserve the right to suspend or terminate your account in the event of a violation of these terms of service. You will be notified in such cases.",
+        "list": null
+      },
+      {
+        "title": "9. Governing Law",
+        "content": "These terms of service are subject to and interpreted under applicable law. Competent courts shall have jurisdiction over disputes.",
+        "list": null
+      },
+      {
+        "title": "10. Contact",
+        "content": "For questions about our terms of service, please contact us at legal@visavaultai.com.",
+        "list": null
+      }
+    ]
+  },
+  "thanks": {
+    "heading": "Request Received",
+    "body": "Your message has been successfully submitted. We will get back to you shortly.",
+    "responseTime": "We typically respond within 1–2 business days. For urgent matters, reach us at",
+    "responseTimeSuffix": "or call",
+    "responseTimeEnd": "",
+    "ctaHome": "Back to Homepage",
+    "ctaPilot": "Explore Pilot Program"
+  },
+  "notFound": {
+    "code": "404",
+    "heading": "Page Not Found",
+    "body": "The page you're looking for doesn't exist or may have been moved.",
+    "ctaHome": "Back to Homepage",
+    "ctaDemo": "Request Demo"
+  },
+  "structuredData": {
+    "orgDescription": "Document collection, AI-powered preliminary review, and attorney-controlled decision workflow platform for immigration law firms.",
+    "websiteDescription": "An attorney-controlled, AI-powered platform that streamlines document collection and preliminary review for immigration cases.",
+    "appDescription": "Document collection, AI pre-review, and attorney-controlled decision workflow platform for immigration law firms.",
+    "offerDescription": "Pilot program applications are open."
+  }
+}

@@ -2,6 +2,10 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import type { Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type FormDict = Dictionary["form"];
 
 type FormData = {
   name: string;
@@ -25,23 +29,15 @@ const initialData: FormData = {
   _honeypot: "",
 };
 
-const roleOptions = [
-  "Kurucu Avukat / Partner",
-  "Kıdemli Avukat",
-  "Avukat",
-  "Legal Operations",
-  "Danışman",
-  "Diğer",
-];
-
-const volumeOptions = [
-  "1–10 dosya",
-  "10–30 dosya",
-  "30–100 dosya",
-  "100+ dosya",
-];
-
-export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
+export function ContactForm({
+  formType = "demo",
+  locale,
+  dict,
+}: {
+  formType?: FormType;
+  locale: Locale;
+  dict: FormDict;
+}) {
   const [data, setData] = useState<FormData>(initialData);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -64,13 +60,13 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
 
     // Basic validation
     if (!data.name.trim() || !data.email.trim() || !data.company.trim()) {
-      setError("Lütfen zorunlu alanları doldurun.");
+      setError(dict.errorRequired);
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
-      setError("Lütfen geçerli bir e-posta adresi girin.");
+      setError(dict.errorEmail);
       return;
     }
 
@@ -80,20 +76,20 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType }),
+        body: JSON.stringify({ ...data, formType, locale }),
       });
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        throw new Error(body.error || "Bir hata oluştu. Lütfen tekrar deneyin.");
+        throw new Error(body.error || dict.errorGeneric);
       }
 
-      router.push("/thanks");
+      router.push(`/${locale}/thanks`);
     } catch (err) {
       setError(
         err instanceof Error
           ? err.message
-          : "Bir hata oluştu. Lütfen tekrar deneyin."
+          : dict.errorGeneric
       );
     } finally {
       setLoading(false);
@@ -122,7 +118,7 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-brand-text mb-2">
-            Ad Soyad <span className="text-brand-danger">*</span>
+            {dict.name} <span className="text-brand-danger">*</span>
           </label>
           <input
             type="text"
@@ -132,13 +128,13 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
             value={data.name}
             onChange={handleChange}
             className={inputClasses}
-            placeholder="Adınız Soyadınız"
+            placeholder={dict.namePlaceholder}
           />
         </div>
 
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-brand-text mb-2">
-            Hukuk Bürosu / Şirket <span className="text-brand-danger">*</span>
+            {dict.company} <span className="text-brand-danger">*</span>
           </label>
           <input
             type="text"
@@ -148,7 +144,7 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
             value={data.company}
             onChange={handleChange}
             className={inputClasses}
-            placeholder="Büro veya şirket adı"
+            placeholder={dict.companyPlaceholder}
           />
         </div>
       </div>
@@ -156,7 +152,7 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-brand-text mb-2">
-            E-posta <span className="text-brand-danger">*</span>
+            {dict.email} <span className="text-brand-danger">*</span>
           </label>
           <input
             type="email"
@@ -166,13 +162,13 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
             value={data.email}
             onChange={handleChange}
             className={inputClasses}
-            placeholder="ornek@buronuz.com"
+            placeholder={dict.emailPlaceholder}
           />
         </div>
 
         <div>
           <label htmlFor="role" className="block text-sm font-medium text-brand-text mb-2">
-            Rol
+            {dict.role}
           </label>
           <select
             id="role"
@@ -181,8 +177,8 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
             onChange={handleChange}
             className={inputClasses}
           >
-            <option value="">Seçiniz</option>
-            {roleOptions.map((opt) => (
+            <option value="">{dict.selectPlaceholder}</option>
+            {dict.roleOptions.map((opt) => (
               <option key={opt} value={opt}>
                 {opt}
               </option>
@@ -193,7 +189,7 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
 
       <div>
         <label htmlFor="caseVolume" className="block text-sm font-medium text-brand-text mb-2">
-          Aylık Yaklaşık Dosya Hacmi
+          {dict.caseVolume}
         </label>
         <select
           id="caseVolume"
@@ -202,8 +198,8 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
           onChange={handleChange}
           className={inputClasses}
         >
-          <option value="">Seçiniz</option>
-          {volumeOptions.map((opt) => (
+          <option value="">{dict.selectPlaceholder}</option>
+          {dict.volumeOptions.map((opt) => (
             <option key={opt} value={opt}>
               {opt}
             </option>
@@ -213,7 +209,7 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-brand-text mb-2">
-          Kısa Not
+          {dict.message}
         </label>
         <textarea
           id="message"
@@ -222,7 +218,7 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
           value={data.message}
           onChange={handleChange}
           className={inputClasses}
-          placeholder="Varsa eklemek istediğiniz kısa bir not..."
+          placeholder={dict.messagePlaceholder}
         />
       </div>
 
@@ -241,14 +237,14 @@ export function ContactForm({ formType = "demo" }: { formType?: FormType }) {
         className="w-full bg-brand-accent text-brand-bg font-semibold px-6 py-4 rounded-xl hover:bg-brand-accent-hover transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg shadow-[0_0_20px_rgba(46,230,166,0.15)] hover:shadow-[0_0_30px_rgba(46,230,166,0.25)]"
       >
         {loading
-          ? "Gönderiliyor..."
+          ? dict.submitting
           : formType === "demo"
-          ? "Demo Talep Et"
-          : "Pilot Başvurusu Gönder"}
+          ? dict.submitDemo
+          : dict.submitPilot}
       </button>
 
       <p className="text-xs text-brand-muted text-center">
-        Bilgileriniz gizli tutulur ve üçüncü taraflarla paylaşılmaz.
+        {dict.disclaimer}
       </p>
     </form>
   );

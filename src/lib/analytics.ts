@@ -29,4 +29,5 @@ export const EVENTS = {
   CTA_CLICK_DEMO: "cta_click_demo",
   CTA_CLICK_PILOT: "cta_click_pilot",
   FAQ_EXPAND: "faq_expand",
+  LOCALE_SWITCH: "locale_switch",
 } as const;

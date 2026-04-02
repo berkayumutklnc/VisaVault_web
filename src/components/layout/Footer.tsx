@@ -1,22 +1,28 @@
 import Link from "next/link";
+import type { Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/get-dictionary";
 
-const footerLinks = {
-  product: [
-    { label: "Çözüm", href: "/#solution" },
-    { label: "Nasıl Çalışır", href: "/#how-it-works" },
-    { label: "Güvenlik", href: "/security" },
-  ],
-  program: [
-    { label: "Demo Talep Et", href: "/demo" },
-    { label: "Pilot Program", href: "/pilot" },
-  ],
-  legal: [
-    { label: "Gizlilik Politikası", href: "/privacy" },
-    { label: "Kullanım Şartları", href: "/terms" },
-  ],
-};
+type FooterDict = Dictionary["footer"];
 
-export function Footer() {
+export function Footer({ locale, dict }: { locale: Locale; dict: FooterDict }) {
+  const lp = `/${locale}`;
+
+  const footerLinks = {
+    product: [
+      { label: dict.navSolution, href: `${lp}#solution` },
+      { label: dict.navHowItWorks, href: `${lp}#how-it-works` },
+      { label: dict.navSecurity, href: `${lp}/security` },
+    ],
+    program: [
+      { label: dict.navDemo, href: `${lp}/demo` },
+      { label: dict.navPilot, href: `${lp}/pilot` },
+    ],
+    legal: [
+      { label: dict.navPrivacy, href: `${lp}/privacy` },
+      { label: dict.navTerms, href: `${lp}/terms` },
+    ],
+  };
+
   return (
     <footer className="relative border-t border-white/[0.06] bg-brand-bg" role="contentinfo">
       {/* Top glow line */}
@@ -27,7 +33,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link
-              href="/"
+              href={lp}
               className="flex items-center gap-2.5 font-heading font-bold text-lg text-brand-text mb-4"
             >
               <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-accent text-brand-bg font-extrabold text-xs">
@@ -38,15 +44,14 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-brand-muted/70 max-w-xs leading-relaxed">
-              Immigration law firms için belge toplama, AI destekli ön inceleme
-              ve avukat kontrollü karar akışını tek platformda birleştirir.
+              {dict.description}
             </p>
           </div>
 
           {/* Product */}
           <div>
             <h3 className="font-heading font-semibold text-xs text-brand-muted/50 mb-4 uppercase tracking-widest">
-              Ürün
+              {dict.product}
             </h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
@@ -65,7 +70,7 @@ export function Footer() {
           {/* Program */}
           <div>
             <h3 className="font-heading font-semibold text-xs text-brand-muted/50 mb-4 uppercase tracking-widest">
-              Başlayın
+              {dict.getStarted}
             </h3>
             <ul className="space-y-3">
               {footerLinks.program.map((link) => (
@@ -84,7 +89,7 @@ export function Footer() {
           {/* Legal */}
           <div>
             <h3 className="font-heading font-semibold text-xs text-brand-muted/50 mb-4 uppercase tracking-widest">
-              Yasal
+              {dict.legal}
             </h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
@@ -104,7 +109,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-xs text-brand-muted/50">
-            &copy; {new Date().getFullYear()} VisaVault AI. Tüm hakları saklıdır.
+            &copy; {new Date().getFullYear()} VisaVault AI. {dict.copyright}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-3 text-xs text-brand-muted/50">

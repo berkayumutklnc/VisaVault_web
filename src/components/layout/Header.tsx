@@ -3,15 +3,22 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/Button";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import type { Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/get-dictionary";
 
-const navLinks = [
-  { label: "Çözüm", href: "/#solution" },
-  { label: "Nasıl Çalışır", href: "/#how-it-works" },
-  { label: "Güvenlik", href: "/security" },
-  { label: "Pilot Program", href: "/pilot" },
-];
+type HeaderDict = Dictionary["header"];
 
-export function Header() {
+export function Header({ locale, dict }: { locale: Locale; dict: HeaderDict }) {
+  const lp = `/${locale}`; // locale prefix
+
+  const navLinks = [
+    { label: dict.nav.solution, href: `${lp}#solution` },
+    { label: dict.nav.howItWorks, href: `${lp}#how-it-works` },
+    { label: dict.nav.security, href: `${lp}/security` },
+    { label: dict.nav.pilot, href: `${lp}/pilot` },
+  ];
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -32,9 +39,9 @@ export function Header() {
       <div className={`container-main flex items-center justify-between transition-all duration-300 ${scrolled ? "h-14 md:h-16" : "h-16 md:h-18"}`}>
         {/* Logo */}
         <Link
-          href="/"
+          href={lp}
           className="flex items-center gap-2.5 font-heading font-bold text-xl text-brand-text"
-          aria-label="VisaVault AI Ana Sayfa"
+          aria-label={dict.ariaHome}
         >
           <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-accent text-brand-bg font-extrabold text-sm">
             V
@@ -46,7 +53,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Ana navigasyon">
+        <nav className="hidden md:flex items-center gap-8" aria-label={dict.ariaNav}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -60,8 +67,9 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Button href="/demo" size="sm">
-            Demo Talep Et
+          <LanguageSwitcher locale={locale} />
+          <Button href={`${lp}/demo`} size="sm">
+            {dict.cta}
           </Button>
         </div>
 
@@ -69,7 +77,7 @@ export function Header() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden p-2 text-brand-muted hover:text-brand-text"
-          aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}
+          aria-label={mobileOpen ? dict.ariaMenuClose : dict.ariaMenuOpen}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? (
@@ -88,7 +96,7 @@ export function Header() {
       {mobileOpen && (
         <nav
           className="md:hidden bg-brand-bg/95 backdrop-blur-xl border-t border-white/[0.06]"
-          aria-label="Mobil navigasyon"
+          aria-label={dict.ariaMobileNav}
         >
           <div className="container-main py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
@@ -101,8 +109,11 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button href="/demo" size="default" onClick={() => setMobileOpen(false)}>
-              Demo Talep Et
+            <div className="flex items-center gap-3 pt-2">
+              <LanguageSwitcher locale={locale} />
+            </div>
+            <Button href={`${lp}/demo`} size="default" onClick={() => setMobileOpen(false)}>
+              {dict.cta}
             </Button>
           </div>
         </nav>

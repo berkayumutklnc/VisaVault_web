@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/Button";
 import { ScreenshotFrame } from "@/components/ui/ScreenshotFrame";
 import { Reveal } from "@/components/ui/Reveal";
+import type { Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/get-dictionary";
 
-const pills = [
-  "Avukat Kontrollü",
-  "AI Ön İnceleme",
-  "Pilot Programa Açık",
-];
+type HeroDict = Dictionary["hero"];
 
-export function Hero() {
+export function Hero({ locale, dict }: { locale: Locale; dict: HeroDict }) {
+  const lp = `/${locale}`;
+
   return (
     <section className="relative overflow-hidden">
       {/* Layered ambient backdrop */}
@@ -46,7 +46,7 @@ export function Hero() {
           {/* Floating pills */}
           <Reveal delay={0}>
             <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
-              {pills.map((pill) => (
+              {dict.pills.map((pill) => (
                 <span key={pill} className="eyebrow">
                   {pill}
                 </span>
@@ -56,30 +56,28 @@ export function Hero() {
 
           <Reveal delay={1}>
             <h1 className="heading-1 mb-6">
-              Immigration Law Firms İçin{" "}
-              <span className="text-brand-accent">Belge Toplama ve AI Ön İnceleme</span>{" "}
-              Platformu
+              {dict.headingBefore}
+              <span className="text-brand-accent">{dict.headingAccent}</span>
+              {dict.headingAfter}
             </h1>
           </Reveal>
 
           <Reveal delay={2}>
             <p className="body-large max-w-2xl mx-auto mb-4">
-              VisaVault AI, göçmenlik dosyalarında belge toplama, AI destekli ön
-              inceleme ve avukat kontrollü karar akışını tek bir dijital ortamda
-              birleştirir. Daha düzenli süreçler, daha görünür dosya durumları.
+              {dict.body}
             </p>
             <p className="text-sm text-brand-muted/80 max-w-xl mx-auto mb-10">
-              AI ön inceleme yapar, son karar her zaman avukata aittir.
+              {dict.bodySmall}
             </p>
           </Reveal>
 
           <Reveal delay={3}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/demo" size="lg">
-                Demo Talep Et
+              <Button href={`${lp}/demo`} size="lg">
+                {dict.ctaDemo}
               </Button>
-              <Button href="/pilot" variant="secondary" size="lg">
-                Pilot Programı İncele
+              <Button href={`${lp}/pilot`} variant="secondary" size="lg">
+                {dict.ctaPilot}
               </Button>
             </div>
           </Reveal>

@@ -1,25 +1,43 @@
 import type { Metadata } from "next";
-import { generatePageMeta } from "@/lib/metadata";
+import { getDictionary } from "@/lib/get-dictionary";
+import { generatePageMeta, SITE_URL } from "@/lib/metadata";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
-import { SITE_URL } from "@/lib/metadata";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { ContactForm } from "@/components/forms/ContactForm";
+import type { Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = generatePageMeta({
-  title: "Demo Talep Et",
-  description:
-    "VisaVault AI'ın canlı demosunu izleyin. Göçmenlik dosya yönetimi platformunun belge toplama, AI ön inceleme ve avukat kontrol akışını yakından görün.",
-  path: "/demo",
-});
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+  return generatePageMeta({
+    title: dict.meta.demo.title,
+    description: dict.meta.demo.description,
+    path: `/${locale}/demo`,
+    locale: locale as Locale,
+  });
+}
 
-export default function DemoPage() {
+export default async function DemoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+  const d = dict.demo;
+  const f = dict.form;
+
   return (
     <>
       <JsonLd
         data={breadcrumbJsonLd([
-          { name: "Ana Sayfa", url: SITE_URL },
-          { name: "Demo Talep Et", url: `${SITE_URL}/demo` },
+          { name: d.breadcrumbHome, url: `${SITE_URL}/${locale}` },
+          { name: d.breadcrumbDemo, url: `${SITE_URL}/${locale}/demo` },
         ])}
       />
 
@@ -28,28 +46,18 @@ export default function DemoPage() {
           {/* Left: Info */}
           <div>
             <h1 className="heading-1 mb-6">
-              Canlı Demo ile{" "}
-              <span className="text-brand-accent">Yakından Görün</span>
+              {d.heading}{" "}
+              <span className="text-brand-accent">{d.headingAccent}</span>
             </h1>
 
-            <p className="body-large mb-10">
-              VisaVault AI&apos;ın belge toplama, AI ön inceleme ve avukat
-              kontrol akışını gerçek bir demo ortamında inceleyin. Büronuzun
-              ihtiyaçlarına uygun olup olmadığını birlikte değerlendirelim.
-            </p>
+            <p className="body-large mb-10">{d.body}</p>
 
             {/* What to expect */}
             <div className="space-y-8">
               <div>
-                <h2 className="heading-3 mb-4">Demo Sürecinde Ne Beklemelisiniz?</h2>
+                <h2 className="heading-3 mb-4">{d.expectTitle}</h2>
                 <ul className="space-y-3">
-                  {[
-                    "Platformun temel iş akışının canlı gösterimi",
-                    "Müvekkil portalı ve avukat panelinin incelenmesi",
-                    "AI ön inceleme modülünün çalışma mantığı",
-                    "Büronuzun ihtiyaçlarına özel soru-cevap",
-                    "Pilot program hakkında detaylı bilgi",
-                  ].map((item) => (
+                  {d.expectItems.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <svg
                         width="20"
@@ -69,14 +77,9 @@ export default function DemoPage() {
               </div>
 
               <div>
-                <h2 className="heading-3 mb-4">Kimler İçin Uygun?</h2>
+                <h2 className="heading-3 mb-4">{d.eligibleTitle}</h2>
                 <ul className="space-y-3">
-                  {[
-                    "Göçmenlik hukuku alanında çalışan hukuk büroları",
-                    "Belge toplama sürecini iyileştirmek isteyen avukatlar",
-                    "Legal operations süreçlerini dijitalleştirmek isteyen ekipler",
-                    "Pilot ortaklık değerlendiren karar vericiler",
-                  ].map((item) => (
+                  {d.eligibleItems.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <svg
                         width="20"
@@ -100,11 +103,9 @@ export default function DemoPage() {
           {/* Right: Form */}
           <div>
             <div className="card p-8 lg:p-10 sticky top-24">
-              <h2 className="heading-3 mb-2">Demo Formu</h2>
-              <p className="body-base mb-6">
-                Formu doldurun, en kısa sürede size ulaşalım.
-              </p>
-              <ContactForm formType="demo" />
+              <h2 className="heading-3 mb-2">{d.formTitle}</h2>
+              <p className="body-base mb-6">{d.formDescription}</p>
+              <ContactForm formType="demo" locale={locale as Locale} dict={f} />
             </div>
           </div>
         </div>

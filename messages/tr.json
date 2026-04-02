@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "siteTitle": "VisaVault AI — Göçmenlik Dosya Yönetimi Platformu",
+    "siteDescription": "Immigration law firms için belge toplama, AI destekli ön inceleme ve avukat kontrollü karar akışını tek platformda birleştiren dijital dosya yönetimi çözümü.",
+    "ogImageAlt": "VisaVault AI — Göçmenlik Dosya Yönetimi",
+    "home": {
+      "title": "Göçmenlik Dosya Yönetimi Platformu",
+      "description": "Immigration law firms için belge toplama, AI destekli ön inceleme ve avukat kontrollü karar akışını tek platformda birleştiren dijital süreç yönetimi çözümü. Pilot programı inceleyin."
+    },
+    "demo": {
+      "title": "Demo Talep Et",
+      "description": "VisaVault AI'ın canlı demosunu izleyin. Göçmenlik dosya yönetimi platformunun belge toplama, AI ön inceleme ve avukat kontrol akışını yakından görün."
+    },
+    "pilot": {
+      "title": "Pilot Program",
+      "description": "VisaVault AI pilot programı ile 2–4 haftalık kontrollü bir deneme yapın. Sınırlı kapsamda, ölçülebilir hedeflerle göçmenlik dosya yönetimi platformunu değerlendirin."
+    },
+    "security": {
+      "title": "Güvenlik ve Kontrol Yaklaşımı",
+      "description": "VisaVault AI'ın güvenlik ve kontrol yaklaşımı: rol bazlı erişim, avukat kontrollü iş akışı, denetlenebilir süreç ve güvenli belge yönetimi."
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası",
+      "description": "VisaVault AI gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi."
+    },
+    "terms": {
+      "title": "Kullanım Şartları",
+      "description": "VisaVault AI kullanım şartları. Platformun kullanımına ilişkin koşullar ve kurallar."
+    },
+    "thanks": {
+      "title": "Teşekkürler",
+      "description": "Talebiniz alındı. En kısa sürede sizinle iletişime geçeceğiz."
+    }
+  },
+  "header": {
+    "ariaHome": "VisaVault AI Ana Sayfa",
+    "ariaNav": "Ana navigasyon",
+    "ariaMobileNav": "Mobil navigasyon",
+    "ariaMenuOpen": "Menüyü aç",
+    "ariaMenuClose": "Menüyü kapat",
+    "nav": {
+      "solution": "Çözüm",
+      "howItWorks": "Nasıl Çalışır",
+      "security": "Güvenlik",
+      "pilot": "Pilot Program"
+    },
+    "cta": "Demo Talep Et"
+  },
+  "footer": {
+    "description": "Immigration law firms için belge toplama, AI destekli ön inceleme ve avukat kontrollü karar akışını tek platformda birleştirir.",
+    "product": "Ürün",
+    "getStarted": "Başlayın",
+    "legal": "Yasal",
+    "navSolution": "Çözüm",
+    "navHowItWorks": "Nasıl Çalışır",
+    "navSecurity": "Güvenlik",
+    "navDemo": "Demo Talep Et",
+    "navPilot": "Pilot Program",
+    "navPrivacy": "Gizlilik Politikası",
+    "navTerms": "Kullanım Şartları",
+    "copyright": "Tüm hakları saklıdır."
+  },
+  "hero": {
+    "pills": ["Avukat Kontrollü", "AI Ön İnceleme", "Pilot Programa Açık"],
+    "headingBefore": "Immigration Law Firms İçin ",
+    "headingAccent": "Belge Toplama ve AI Ön İnceleme",
+    "headingAfter": " Platformu",
+    "body": "VisaVault AI, göçmenlik dosyalarında belge toplama, AI destekli ön inceleme ve avukat kontrollü karar akışını tek bir dijital ortamda birleştirir. Daha düzenli süreçler, daha görünür dosya durumları.",
+    "bodySmall": "AI ön inceleme yapar, son karar her zaman avukata aittir.",
+    "ctaDemo": "Demo Talep Et",
+    "ctaPilot": "Pilot Programı İncele"
+  },
+  "problem": {
+    "eyebrow": "Mevcut Zorluklar",
+    "heading": "Göçmenlik Bürolarında Belge Sürecinin Zorlukları",
+    "description": "Immigration dosyalarında belge toplama ve ön inceleme süreci, büroların en çok zaman kaybettiği aşamalardan biridir.",
+    "items": [
+      {
+        "title": "Dağınık Belge Toplama",
+        "description": "Belgeler e-posta, WhatsApp, dosya paylaşımı gibi farklı kanallardan gelir. Hangi belgenin geldiği, hangisinin eksik olduğu net değildir."
+      },
+      {
+        "title": "Eksik Belge Döngüsü",
+        "description": "Müvekkilden tekrar tekrar belge istenir, sürüm karışıklıkları oluşur, son durumu kimse net takip edemez."
+      },
+      {
+        "title": "Yavaş Ön İnceleme",
+        "description": "Her belgenin tek tek gözden geçirilmesi zaman alır. Avukatın zamanı düşük katma değerli kontrollere harcanır."
+      },
+      {
+        "title": "Kopuk İletişim",
+        "description": "Müvekkil ve avukat arasındaki iletişim farklı kanallarda dağılır. Notlar kaybolur, bağlam eksik kalır."
+      }
+    ]
+  },
+  "solution": {
+    "eyebrow": "Çözüm",
+    "heading": "Tek Platform, Düzenli Süreç",
+    "description": "VisaVault AI, belge toplama aşamasından avukat onayına kadar tüm akışı tek bir dijital ortamda toplar.",
+    "items": [
+      {
+        "title": "Müvekkil Belge Yükleme",
+        "description": "Müvekkilleriniz güvenli bir portal üzerinden belgelerini yükler. Hangi belgenin beklendiği, hangisinin geldiği net görünür."
+      },
+      {
+        "title": "AI Ön İnceleme",
+        "description": "Yüklenen belgeler AI tarafından ön incelemeye alınır. Eksiklik, uyumsuzluk ve dikkat gerektiren noktalar otomatik işaretlenir."
+      },
+      {
+        "title": "Avukat Değerlendirmesi",
+        "description": "Avukat, AI ön incelemesini gözden geçirir, kendi notlarını ekler ve belge üzerinde karar verir. Son söz her zaman avukata aittir."
+      },
+      {
+        "title": "Revizyon ve İletişim",
+        "description": "Eksik veya yetersiz belgeler için müvekkile revizyon talebi gönderilir. Tüm süreç aynı akış içinde kalır."
+      },
+      {
+        "title": "Kontrollü İletişim Akışı",
+        "description": "Müvekkil ve avukat arasındaki iletişim dosya bazında organize edilir. Notlar, talepler ve güncellemeler tek bir yerde toplanır."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Süreç",
+    "heading": "Nasıl Çalışır?",
+    "description": "Dört adımda belge toplama ve inceleme süreci daha kontrollü ve görünür hale gelir.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Belge Yükleme",
+        "description": "Müvekkil, kendisine açılan güvenli portal üzerinden gerekli belgeleri yükler. Eksik belgeler otomatik olarak listelenir."
+      },
+      {
+        "step": "02",
+        "title": "AI Ön İnceleme",
+        "description": "Yüklenen belgeler AI tarafından ön incelemeye alınır. Olası eksiklikler ve dikkat edilmesi gereken noktalar işaretlenir."
+      },
+      {
+        "step": "03",
+        "title": "Avukat Değerlendirmesi",
+        "description": "Avukat, AI'ın ön inceleme notlarını görür, kendi değerlendirmesini yapar ve belge hakkında karar verir."
+      },
+      {
+        "step": "04",
+        "title": "Revizyon veya Onay",
+        "description": "Belge yeterliyse onaylanır. Yetersizse müvekkile net bir revizyon talebi gönderilir. Süreç aynı akışta devam eder."
+      }
+    ]
+  },
+  "productProof": {
+    "eyebrow": "Ürün",
+    "heading": "Ürünü Yakından İnceleyin",
+    "description": "VisaVault AI'ın gerçek arayüzü. Müvekkil portalı, belge inceleme ekranı ve avukat karar paneli.",
+    "captionDashboard": "Avukat paneli — Dosya durumu, belge listesi ve AI ön inceleme notları",
+    "captionReview": "AI ön inceleme — Belge detay paneli",
+    "captionMobile": "Müvekkil portalı — Mobil belge yükleme",
+    "altDashboard": "VisaVault AI — Dosya yönetim paneli ve belge durumu",
+    "altReview": "VisaVault AI — Belge detay ve AI inceleme paneli",
+    "altMobile": "VisaVault AI — Müvekkil mobil belge yükleme"
+  },
+  "attorneyControl": {
+    "eyebrow": "Avukat Kontrolü",
+    "headingBefore": "AI Ön İnceleme Yapar, ",
+    "headingAccent": "Son Karar Avukata Aittir",
+    "items": [
+      {
+        "title": "AI, Belgeleri Ön İnceler",
+        "description": "Yapay zeka, yüklenen belgeleri kontrol eder ve olası eksiklikleri, uyumsuzlukları işaretler. Bu bir ön filtreleme katmanıdır."
+      },
+      {
+        "title": "Avukat, Kendi Değerlendirmesini Yapar",
+        "description": "Avukat, AI ön incelemesini referans alır ancak kendi bağımsız değerlendirmesini yaparak belge hakkında nihai kararı verir."
+      },
+      {
+        "title": "Hiçbir Otomatik Karar Yok",
+        "description": "Sistem hiçbir belgeyi otomatik olarak onaylamaz veya reddetmez. Her belge mutlaka bir avukatın incelemesinden geçer."
+      }
+    ],
+    "flowAiLabel": "AI Ön İnceleme",
+    "flowAiText": "Pasaport belgesi yüklendi. Geçerlilik tarihi uyumlu. İmza alanı kontrol edilmeli.",
+    "flowAttorneyLabel": "Avukat Kararı",
+    "flowAttorneyText": "İmza alanını inceledim, belge kabul edildi. Müvekkile bilgilendirme gönderildi."
+  },
+  "auditability": {
+    "eyebrow": "Denetlenebilirlik",
+    "heading": "Görünür ve Denetlenebilir Süreç",
+    "description": "Her belge, her adım ve her karar kayıt altındadır. Süreç şeffaf, izlenebilir ve yönetilebilir hale gelir.",
+    "items": [
+      {
+        "title": "Belge Durumu Takibi",
+        "description": "Her belgenin güncel durumu (bekliyor, incelemede, onaylı, revizyon gerekli) tek bakışta görülür.",
+        "chip": "Onaylı"
+      },
+      {
+        "title": "Süreç Zaman Çizelgesi",
+        "description": "Her dosya için tarihli bir zaman çizelgesi tutulur. Kim ne zaman ne yaptı, net görülür.",
+        "chip": "Timeline"
+      },
+      {
+        "title": "Karar Notları",
+        "description": "Avukat notları ve AI ön inceleme özetleri belge bazında saklanır. Revizyon geçmişi korunur.",
+        "chip": "Notlar"
+      },
+      {
+        "title": "Denetim İzi",
+        "description": "Tüm işlemler kayıt altında tutulur. Süreçte kimin ne zaman hangi adımı attığı her zaman izlenebilir.",
+        "chip": "Audit Log"
+      }
+    ]
+  },
+  "pilotCTA": {
+    "eyebrow": "Pilot Program",
+    "heading": "Kontrollü Bir Başlangıç Yapın",
+    "description": "2–4 haftalık pilot programla VisaVault AI'ı sınırlı kapsamda, ölçülebilir hedeflerle değerlendirin. Risk almadan, gerçek dosyalarınızla test edin.",
+    "metrics": [
+      { "value": "2–4", "label": "Hafta Pilot Süresi" },
+      { "value": "5–15", "label": "Dosya ile Test" },
+      { "value": "%0", "label": "Başlangıç Maliyeti" }
+    ],
+    "ctaPilot": "Pilot Programı İncele",
+    "ctaDemo": "Önce Demo İzle"
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "heading": "Sık Sorulan Sorular",
+    "description": "VisaVault AI hakkında merak edilen konular.",
+    "items": [
+      {
+        "question": "VisaVault AI, avukatın yerine karar veriyor mu?",
+        "answer": "Hayır. VisaVault AI yalnızca ön inceleme desteği sağlar. Belgelerdeki olası eksiklikleri ve dikkat noktalarını işaretler. Onay, ret veya revizyon kararı her zaman avukata aittir. Sistem hiçbir belgeyi otomatik olarak onaylamaz veya reddetmez."
+      },
+      {
+        "question": "Hangi tür hukuk büroları için uygun?",
+        "answer": "VisaVault AI, öncelikle göçmenlik hukuku alanında çalışan boutique ve orta ölçekli hukuk büroları için tasarlanmıştır. Belge toplama ve ön inceleme sürecinde yoğunluk yaşayan, müvekkil iletişimini düzenlemek isteyen bürolar için uygundur."
+      },
+      {
+        "question": "Pilot program nasıl işliyor?",
+        "answer": "Pilot program 2–4 hafta sürer. Sınırlı sayıda dosya üzerinde, ölçülebilir hedeflerle platformu gerçek iş akışınızda denemenizi sağlar. Pilot süresince teknik destek sağlanır."
+      },
+      {
+        "question": "Belgelerimiz güvende mi?",
+        "answer": "Belgeler, güvenli bir altyapıda saklanır. Rol bazlı erişim kontrolü uygulanır. Avukat onayı olmadan hiçbir belge paylaşılmaz veya dışa aktarılmaz. Detaylar için güvenlik sayfamızı inceleyebilirsiniz."
+      },
+      {
+        "question": "Mevcut iş akışımı tamamen değiştirmem gerekiyor mu?",
+        "answer": "Hayır. VisaVault AI, mevcut belge toplama sürecinizin dijitalleşmiş bir versiyonu olarak çalışır. Mevcut akışınıza eklenebilir şekilde tasarlanmıştır, radikal bir değişiklik gerektirmez."
+      },
+      {
+        "question": "Müvekkillerim teknolojiyle arası iyi değilse ne olacak?",
+        "answer": "Müvekkil portalı, mümkün olduğunca basit tutulmuştur. Belge yükleme, durum takibi ve mesajlaşma gibi temel işlevler sade bir arayüzle sunulur. Karmaşık bir öğrenme süreci gerektirmez."
+      }
+    ]
+  },
+  "form": {
+    "name": "Ad Soyad",
+    "company": "Hukuk Bürosu / Şirket",
+    "email": "E-posta",
+    "role": "Rol",
+    "caseVolume": "Aylık Yaklaşık Dosya Hacmi",
+    "message": "Kısa Not",
+    "namePlaceholder": "Adınız Soyadınız",
+    "companyPlaceholder": "Büro veya şirket adı",
+    "emailPlaceholder": "ornek@buronuz.com",
+    "messagePlaceholder": "Varsa eklemek istediğiniz kısa bir not...",
+    "selectPlaceholder": "Seçiniz",
+    "roleOptions": [
+      "Kurucu Avukat / Partner",
+      "Kıdemli Avukat",
+      "Avukat",
+      "Legal Operations",
+      "Danışman",
+      "Diğer"
+    ],
+    "volumeOptions": [
+      "1–10 dosya",
+      "10–30 dosya",
+      "30–100 dosya",
+      "100+ dosya"
+    ],
+    "submitDemo": "Demo Talep Et",
+    "submitPilot": "Pilot Başvurusu Gönder",
+    "submitting": "Gönderiliyor...",
+    "disclaimer": "Bilgileriniz gizli tutulur ve üçüncü taraflarla paylaşılmaz.",
+    "errorRequired": "Lütfen zorunlu alanları doldurun.",
+    "errorEmail": "Lütfen geçerli bir e-posta adresi girin.",
+    "errorGeneric": "Bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "demo": {
+    "heading": "Canlı Demo ile",
+    "headingAccent": "Yakından Görün",
+    "body": "VisaVault AI'ın belge toplama, AI ön inceleme ve avukat kontrol akışını gerçek bir demo ortamında inceleyin. Büronuzun ihtiyaçlarına uygun olup olmadığını birlikte değerlendirelim.",
+    "expectTitle": "Demo Sürecinde Ne Beklemelisiniz?",
+    "expectItems": [
+      "Platformun temel iş akışının canlı gösterimi",
+      "Müvekkil portalı ve avukat panelinin incelenmesi",
+      "AI ön inceleme modülünün çalışma mantığı",
+      "Büronuzun ihtiyaçlarına özel soru-cevap",
+      "Pilot program hakkında detaylı bilgi"
+    ],
+    "eligibleTitle": "Kimler İçin Uygun?",
+    "eligibleItems": [
+      "Göçmenlik hukuku alanında çalışan hukuk büroları",
+      "Belge toplama sürecini iyileştirmek isteyen avukatlar",
+      "Legal operations süreçlerini dijitalleştirmek isteyen ekipler",
+      "Pilot ortaklık değerlendiren karar vericiler"
+    ],
+    "formTitle": "Demo Formu",
+    "formDescription": "Formu doldurun, en kısa sürede size ulaşalım.",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbDemo": "Demo Talep Et"
+  },
+  "pilot": {
+    "badge": "Pilot Program",
+    "heading": "Kontrollü Bir Başlangıçla",
+    "headingAccent": "Değerlendirin",
+    "body": "VisaVault AI'ı büronuzun gerçek dosyalarıyla, sınırlı kapsamda, 2–4 haftalık bir pilot programla deneyin. Risk almadan, ölçülebilir sonuçlarla karar verin.",
+    "ctaApply": "Pilot Başvurusu Yap",
+    "ctaDemo": "Önce Demo İzle",
+    "whatTitle": "Pilot Program Nedir?",
+    "whatBody": "Pilot program, VisaVault AI platformunu gerçek iş akışınızda, kontrollü bir ortamda denemenizi sağlayan kısa süreli bir değerlendirme sürecidir. Amacı, platformun büronuzun ihtiyaçlarına uygun olup olmadığını somut verilerle belirlemektir.",
+    "duration": "Süre",
+    "durationValue": "2–4 hafta",
+    "scope": "Kapsam",
+    "scopeValue": "Sınırlı dosya sayısı ile test",
+    "whoTitle": "Kimler İçin Uygundur?",
+    "whoItems": [
+      "Göçmenlik hukuku alanında düzenli dosya yöneten hukuk büroları",
+      "Belge toplama sürecinde tekrarlayan sorunlar yaşayan ekipler",
+      "Dijital araçlarla süreç iyileştirmek isteyen avukatlar",
+      "Legal-tech çözümleri değerlendiren büro partnerleri",
+      "Kontrollü bir başlangıçla yeni bir araç denemek isteyen karar vericiler"
+    ],
+    "scopeTitle": "Pilot Kapsamı",
+    "scopeItems": [
+      {
+        "title": "Sınırlı Dosya Kapsamı",
+        "description": "Pilot süresince belirli sayıda dosya üzerinde çalışılır. Tüm büro operasyonunuzu değiştirmeniz gerekmez."
+      },
+      {
+        "title": "Ölçülebilir Hedefler",
+        "description": "Belge toplama süresi, revizyon döngüsü, avukat inceleme hızı gibi ölçülebilir metrikler belirlenir."
+      },
+      {
+        "title": "Teknik Destek",
+        "description": "Pilot süresince kurulum, eğitim ve teknik destek sağlanır. Sorularınız hızlıca yanıtlanır."
+      },
+      {
+        "title": "Değerlendirme Raporu",
+        "description": "Pilot sonunda elde edilen sonuçlar ve gözlemler bir rapor halinde paylaşılır."
+      }
+    ],
+    "criteriaTitle": "Başarı Kriterleri",
+    "criteriaBody": "Pilot program boyunca şu alanlarda ölçülebilir iyileşme hedeflenir:",
+    "criteriaItems": [
+      "Belge toplama sürecinin düzenlenmesi",
+      "Müvekkil-avukat iletişiminin tek kanalda toplanması",
+      "AI ön inceleme ile avukat inceleme süresinin azalması",
+      "Revizyon döngüsünün kısalması",
+      "Sürecin daha görünür ve izlenebilir hale gelmesi"
+    ],
+    "collabTitle": "Beklenen İş Birliği",
+    "collabBody": "Pilot sürecinde büronuzdan beklenen katkı minimumdur. Belirlenmiş dosyaların platforma aktarılması ve ekipten bir kişinin ana iletişim noktası olarak belirlenmesi yeterlidir. Geri kalan kurulum ve eğitim sürecini biz yürütürüz.",
+    "formTitle": "Pilot Program Başvurusu",
+    "formBody": "Formu doldurun, pilot program detaylarını birlikte planlayalım.",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbPilot": "Pilot Program"
+  },
+  "security": {
+    "heading": "Güvenlik ve Kontrol Yaklaşımı",
+    "body": "VisaVault AI, hukuk bürolarının belge süreçlerini yönetirken güvenlik, kontrol ve denetlenebilirliği ön planda tutar. Aşağıda platformun temel güvenlik ve kontrol prensipleri yer almaktadır.",
+    "items": [
+      {
+        "title": "Rol Bazlı Erişim Kontrolü",
+        "description": "Platformda her kullanıcı rolü (avukat, müvekkil, ekip üyesi) farklı erişim seviyelerine sahiptir. Müvekkiller yalnızca kendi dosyalarına erişir. Avukatlar, atandıkları dosyaları yönetir. Erişim sınırları net olarak tanımlıdır."
+      },
+      {
+        "title": "Avukat Kontrollü İş Akışı",
+        "description": "Hiçbir belge otomatik olarak onaylanmaz veya reddedilemez. AI sistemi yalnızca ön inceleme yapar ve dikkat noktalarını işaretler. Onay, ret ve revizyon kararları yalnızca avukat tarafından verilir."
+      },
+      {
+        "title": "Kontrollü Belge İnceleme Akışı",
+        "description": "Belgeler, yapılandırılmış bir akış içinde işlenir: yükleme → AI ön inceleme → avukat değerlendirmesi → karar. Her adım kayıt altındadır. Belge durumları (bekliyor, incelemede, onaylı, revizyon gerekli) her zaman görülebilir."
+      },
+      {
+        "title": "Denetlenebilirlik ve Süreç Görünürlüğü",
+        "description": "Tüm işlemler (belge yükleme, inceleme, not ekleme, karar verme, revizyon talebi) zaman damgalı olarak kaydedilir. Dosya bazlı zaman çizelgesi, kimin ne zaman ne yaptığını gösterir. Denetim izi her zaman erişilebilirdir."
+      },
+      {
+        "title": "Güvenli Belge Yönetimi",
+        "description": "Belgeler güvenli bir altyapıda saklanır. Dosya transferleri şifreli bağlantılar üzerinden gerçekleşir. Erişim izinleri rol bazında sınırlandırılır. Belgeler avukat onayı olmadan dışa aktarılamaz."
+      },
+      {
+        "title": "E-posta ve Bildirim Ayrımı",
+        "description": "Platform üzerinden gönderilen bildirimler, iş akışı ile ilgili durum güncellemelerini içerir. E-posta içerikleri belge detaylarını barındırmaz; yalnızca ilgili aksiyona bağlantı sağlar. Hassas bilgiler e-posta üzerinden paylaşılmaz."
+      }
+    ],
+    "disclaimer": "Bu sayfa VisaVault AI'ın güvenlik yaklaşımını genel hatlarıyla anlatır. Belirtilen özellikler mevcut mimari tasarımı ve geliştirme hedeflerini yansıtır. Üçüncü taraf güvenlik sertifikasyonları henüz alınmamıştır. Detaylı güvenlik soruları için bizimle iletişime geçebilirsiniz.",
+    "disclaimerNote": "Not:",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbSecurity": "Güvenlik"
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "sections": [
+      {
+        "title": "1. Genel Bakış",
+        "content": "VisaVault AI (\"Platform\", \"biz\"), kullanıcılarının gizliliğine önem verir. Bu gizlilik politikası, web sitemiz (visavaultai.com) ve platformumuz aracılığıyla toplanan kişisel verilerin nasıl işlendiğini açıklar.",
+        "list": null
+      },
+      {
+        "title": "2. Toplanan Veriler",
+        "content": "Aşağıdaki bilgiler, iletişim formları ve platform kullanımı sırasında toplanabilir:",
+        "list": [
+          "Ad, soyad ve iletişim bilgileri (e-posta adresi)",
+          "Hukuk bürosu veya şirket adı",
+          "Mesleki rol bilgisi",
+          "İş hacmine ilişkin genel bilgiler",
+          "Form aracılığıyla iletilen mesajlar ve notlar",
+          "Web sitesi kullanım verileri (çerezler, sayfa ziyareti gibi teknik bilgiler)"
+        ]
+      },
+      {
+        "title": "3. Verilerin Kullanım Amacı",
+        "content": "Toplanan veriler şu amaçlarla kullanılır:",
+        "list": [
+          "Demo ve pilot program taleplerinin işlenmesi",
+          "İletişim ve bilgilendirme",
+          "Hizmet kalitesinin iyileştirilmesi",
+          "Yasal yükümlülüklerin yerine getirilmesi"
+        ]
+      },
+      {
+        "title": "4. Verilerin Paylaşımı",
+        "content": "Kişisel verileriniz, açık onayınız olmadan üçüncü taraflarla pazarlama amacıyla paylaşılmaz. Veriler, hizmet sağlayıcılarımız (e-posta gönderim servisi, hosting sağlayıcısı gibi) tarafından yalnızca hizmet sunumu amacıyla işlenebilir. Bu sağlayıcılar, verileri kendi amaçları için kullanmamaları yönünde yükümlülüklerle bağlıdır.",
+        "list": null
+      },
+      {
+        "title": "5. Veri Güvenliği",
+        "content": "Kişisel verilerinizin korunması için uygun teknik ve organizasyonel önlemler alınır. Veriler güvenli sunucularda saklanır ve erişim yetkileri sınırlandırılır. Ancak, internet üzerinden yapılan hiçbir iletimin mutlak güvenliği garanti edilemez.",
+        "list": null
+      },
+      {
+        "title": "6. Çerezler",
+        "content": "Web sitemiz, temel işlevselliği sağlamak için teknik çerezler kullanabilir. Analitik veya pazarlama çerezleri kullanılması durumunda ayrıca bilgilendirme yapılır ve gerekli onaylar alınır.",
+        "list": null
+      },
+      {
+        "title": "7. Haklarınız",
+        "content": "İlgili veri koruma mevzuatı kapsamında aşağıdaki haklara sahipsiniz:",
+        "list": [
+          "Verilerinize erişim talep etme",
+          "Verilerinizin düzeltilmesini veya silinmesini isteme",
+          "Veri işlenmesine itiraz etme",
+          "Veri taşınabilirliği talep etme"
+        ],
+        "contactNote": "Bu haklarınızı kullanmak için privacy@visavaultai.com adresinden bize ulaşabilirsiniz."
+      },
+      {
+        "title": "8. Değişiklikler",
+        "content": "Bu gizlilik politikası zaman zaman güncellenebilir. Değişiklikler bu sayfada yayımlanır. Önemli değişikliklerde ek bilgilendirme yapılabilir.",
+        "list": null
+      },
+      {
+        "title": "9. İletişim",
+        "content": "Gizlilik politikamızla ilgili sorularınız için privacy@visavaultai.com adresinden bize ulaşabilirsiniz.",
+        "list": null
+      }
+    ]
+  },
+  "terms": {
+    "title": "Kullanım Şartları",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "sections": [
+      {
+        "title": "1. Kabul",
+        "content": "Bu web sitesini (visavaultai.com) veya VisaVault AI platformunu kullanarak aşağıdaki kullanım şartlarını kabul etmiş sayılırsınız. Bu şartları kabul etmiyorsanız, siteyi ve platformu kullanmamanız gerekmektedir.",
+        "list": null
+      },
+      {
+        "title": "2. Hizmet Tanımı",
+        "content": "VisaVault AI, göçmenlik hukuku alanında çalışan hukuk büroları için belge toplama, AI destekli ön inceleme ve avukat kontrollü karar akışı sunan bir dijital platformdur. Platform, hukuki danışmanlık hizmeti sunmaz ve avukat-müvekkil ilişkisini değiştirmez.",
+        "list": null
+      },
+      {
+        "title": "3. AI Ön İnceleme Hakkında",
+        "content": "Platformdaki AI bileşeni yalnızca ön inceleme desteği sağlar. AI tarafından üretilen notlar, öneriler ve işaretlemeler bilgi amaçlıdır ve hukuki tavsiye niteliği taşımaz. Belgeler hakkındaki nihai kararlar her zaman yetkili avukat tarafından verilmelidir. VisaVault AI, AI çıktılarının doğruluğu veya tamlığı konusunda garanti vermez.",
+        "list": null
+      },
+      {
+        "title": "4. Kullanıcı Sorumlulukları",
+        "content": null,
+        "list": [
+          "Hesap bilgilerinizin gizliliğini korumakla yükümlüsünüz.",
+          "Platformu yalnızca yasal amaçlarla kullanmalısınız.",
+          "Yüklediğiniz belgelerin doğruluğundan siz sorumlusunuz.",
+          "Platformu kötüye kullanma, tersine mühendislik yapma veya güvenlik açığı aramaya yönelik faaliyetler yasaktır.",
+          "AI çıktılarını bağımsız olarak doğrulamak avukatın sorumluluğundadır."
+        ]
+      },
+      {
+        "title": "5. Fikri Mülkiyet",
+        "content": "Platform, web sitesi ve içerikleri (yazılım, tasarım, metinler, grafikler) VisaVault AI'a aittir ve telif hakkı ile korunmaktadır. İçeriklerin izinsiz kopyalanması, dağıtılması veya ticari amaçla kullanılması yasaktır.",
+        "list": null
+      },
+      {
+        "title": "6. Sorumluluk Sınırı",
+        "content": "VisaVault AI, platformun kesintisiz veya hatasız çalışacağını garanti etmez. Platform kullanımından kaynaklanan doğrudan veya dolaylı zararlardan sorumluluğumuz, ilgili mevzuat tarafından izin verilen azami ölçüde sınırlıdır. Hukuki kararların sorumluluğu her zaman ilgili avukat veya hukuk bürosuna aittir.",
+        "list": null
+      },
+      {
+        "title": "7. Hizmet Değişiklikleri",
+        "content": "Platformun özelliklerini, fiyatlandırmasını veya kullanım şartlarını önceden bildirmek kaydıyla değiştirme hakkımız saklıdır. Önemli değişikliklerde kullanıcılara bilgilendirme yapılır.",
+        "list": null
+      },
+      {
+        "title": "8. Hesap Sonlandırma",
+        "content": "Kullanım şartlarının ihlali durumunda hesabınızı askıya alma veya sonlandırma hakkımızı saklı tutuyoruz. Bu durumda tarafınıza bilgilendirme yapılır.",
+        "list": null
+      },
+      {
+        "title": "9. Uygulanacak Hukuk",
+        "content": "Bu kullanım şartları, yürürlükteki mevzuata tabi olarak yorumlanır. Uyuşmazlıkların çözümünde yetkili mahkemeler geçerlidir.",
+        "list": null
+      },
+      {
+        "title": "10. İletişim",
+        "content": "Kullanım şartlarıyla ilgili sorularınız için legal@visavaultai.com adresinden bize ulaşabilirsiniz.",
+        "list": null
+      }
+    ]
+  },
+  "thanks": {
+    "heading": "Talebiniz Alındı",
+    "body": "Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.",
+    "responseTime": "Genellikle 1–2 iş günü içinde yanıt veriyoruz. Acil bir konunuz varsa",
+    "responseTimeSuffix": "adresinden veya",
+    "responseTimeEnd": "numarasından bize ulaşabilirsiniz.",
+    "ctaHome": "Ana Sayfaya Dön",
+    "ctaPilot": "Pilot Programı İncele"
+  },
+  "notFound": {
+    "code": "404",
+    "heading": "Sayfa Bulunamadı",
+    "body": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+    "ctaHome": "Ana Sayfaya Dön",
+    "ctaDemo": "Demo Talep Et"
+  },
+  "structuredData": {
+    "orgDescription": "Immigration law firms için belge toplama, AI destekli ön inceleme ve avukat kontrollü karar akışı platformu.",
+    "websiteDescription": "Göçmenlik dosyalarında belge toplama ve ön inceleme sürecini düzenleyen, avukat kontrollü AI destekli platform.",
+    "appDescription": "Immigration law firms için belge toplama, AI ön inceleme ve avukat kontrollü karar akışı platformu.",
+    "offerDescription": "Pilot program başvurusu açık."
+  }
+}

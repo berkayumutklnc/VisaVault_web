@@ -3,7 +3,9 @@
 import { useState, useRef, useEffect } from "react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Reveal } from "@/components/ui/Reveal";
-import { faqs } from "@/lib/faq-data";
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type FAQDict = Dictionary["faq"];
 
 function FAQItem({
   question,
@@ -61,23 +63,23 @@ function FAQItem({
   );
 }
 
-export function FAQ() {
+export function FAQ({ dict }: { dict: FAQDict }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <SectionWrapper id="faq">
       <Reveal>
         <div className="text-center mb-16">
-          <span className="eyebrow mb-4 inline-block">SSS</span>
-          <h2 className="heading-2 mb-4">Sık Sorulan Sorular</h2>
+          <span className="eyebrow mb-4 inline-block">{dict.eyebrow}</span>
+          <h2 className="heading-2 mb-4">{dict.heading}</h2>
           <p className="body-large max-w-2xl mx-auto">
-            VisaVault AI hakkında merak edilen konular.
+            {dict.description}
           </p>
         </div>
       </Reveal>
 
       <div className="max-w-3xl mx-auto space-y-3">
-        {faqs.map((faq, i) => (
+        {dict.items.map((faq, i) => (
           <Reveal key={i} delay={Math.min(i + 1, 4) as 0 | 1 | 2 | 3 | 4}>
             <FAQItem
               question={faq.question}
